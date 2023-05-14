@@ -20,12 +20,12 @@ async function getModuleAssignment() {
         for (let i = 0; i < games.length; i++) {
             console.log(games[i].name);
             console.log(games[i].rating);
-            console.log(games[i].tag);
-    
+            console.log(games[i].tags.length);
+
             if (i === 8) {
                 break;
-            }    
-            resultsContainer.innerHTML += `<div class="result">Name: ${games[i].name} Rating: ${games[i].rating} Tags: ${games[i].tag}</div>`;
+            }
+            resultsContainer.innerHTML += `<div class="result">Name: ${games[i].name} <br> Rating: ${games[i].rating} <br> Tags: ${games[i].tags.length} </div>`;
         }
     } catch (error) {
         console.log("An error occurred");
